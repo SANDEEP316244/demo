@@ -22,3 +22,11 @@ validate "mysql"
 else
  echo -e "MySQL already exist"
 fi
+
+yum list installed nginx
+if [ $? -ne 0 ]; then
+yum install nginx -y
+validate "nginx"
+else
+echo " nginx already exists "
+fi
