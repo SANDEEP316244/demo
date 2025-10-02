@@ -13,9 +13,10 @@ echo " sucessfully installed $1"
 else
 echo " $1 failed to install "
 fi
+}
 
 
-1yum list installed mysql
+yum list installed mysql
 if [ $? -ne 0 ]; then
 yum install mysql -y
 
