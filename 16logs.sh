@@ -8,7 +8,7 @@ mkdir $logs_folder
 echo " script started executing $(date) " | tee -a $log_file
 
 
-if [ $user_id -ne o ]; then
+if [ $user_id -ne 0 ]; then
 echo " RUN AS A SUDOER "
 fi 
 
