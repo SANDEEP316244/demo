@@ -7,7 +7,7 @@ echo "RUN AS A ROOT USER "
 exit 1
 fi
 
-vallidate(){
+validate(){
 if [ $? -eq 0 ];then
 echo " sucessfully installed $1"
 else
@@ -15,11 +15,10 @@ echo " $1 failed to install "
 fi
 }
 
-
 yum list installed mysql
 if [ $? -ne 0 ]; then
 yum install mysql -y
-
+validate "mysql"
 else
  echo -e "MySQL already exist"
 fi
